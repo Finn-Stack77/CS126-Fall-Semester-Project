@@ -34,6 +34,8 @@ char** parse_line(char* line){
             bufsize *= 2;
             tokens = realloc(tokens, sizeof(char*) * bufsize);
         }
+
+        token = strtok(NULL, " \t\n");
     }
     token[position] = NULL;
      return tokens;
